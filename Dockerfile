@@ -59,7 +59,13 @@ RUN mv /tmp/ssh_config ~/.ssh/config && \
     mv /tmp/run-wordcount.sh ~/run-wordcount.sh && \
     mv /tmp/spark-defaults.conf $SPARK_HOME/conf/spark-defaults.conf && \
     mv /tmp/hive-env.sh $HIVE_HOME/conf/hive-env.sh && \
-    mv /tmp/hive-site.xml $HIVE_HOME/conf/hive-site.xml
+    mv /tmp/hive-site.xml $HIVE_HOME/conf/hive-site.xml && \
+    mv /tmp/beeline-log4j2.properties $HIVE_HOME/conf/beeline-log4j2.properties && \
+    mv /tmp/hive-exec-log4j2.properties $HIVE_HOME/conf/hive-exec-log4j2.properties && \\
+    mv /tmp/hive-log4j2.properties $HIVE_HOME/conf/hive-log4j2.properties && \\
+    mv /tmp/ivysettings.xml $HIVE_HOME/conf/ivysettings.xml && \\
+    mv /tmp/llap-daemon-log4j2.properties $HIVE_HOME/conf/llap-daemon-log4j2.properties 
+    
 
 RUN chmod +x ~/start-hadoop.sh && \
     chmod +x ~/run-wordcount.sh && \
